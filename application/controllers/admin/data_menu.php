@@ -53,10 +53,10 @@ class Data_menu extends CI_Controller{
 	}
 
 	public function update(){
-		$Id_menu               =$this->input->post('Id_menu');
-		$nama               =$this->input->post('nama');
-		$jenis               =$this->input->post('jenis');
-		$harga               =$this->input->post('harga');
+		$id_menu               =$this->input->post('id_menu');
+		$nama                  =$this->input->post('nama');
+		$jenis                 =$this->input->post('jenis');
+		$harga                 =$this->input->post('harga');
 
 		 $data = array(
 		 	'Nama'    => $nama,
@@ -70,11 +70,15 @@ class Data_menu extends CI_Controller{
 		 );
 
 
-		  $this->model_menu->update_menu($where,$data, 'tb_menu');
+		  $this->model_menu->update_data($where,$data, 'tb_menu');
 		 redirect('admin/data_menu/index');
 
+	}
 
-
-
+	public function hapus ($id_menu)
+	{
+		$where = array('Id_menu' =>$id_menu);
+		$this->model_menu->hapus_data($where, 'tb_menu');
+		redirect('admin/data_menu/index');
 	}
 }

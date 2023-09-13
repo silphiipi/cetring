@@ -35,7 +35,8 @@
                 <h5 class="card-title mb-1"><?php echo $mn->Nama ?></h5>
                 <small><?php echo $mn->Jenis ?></small>
                 <span class="badge badge-pill badge-success ">Rp. <?php echo $mn->Harga ?></span>
-                <a href="#" class="btn btn-sm btn-primary">Tambah ke Keranjang</a>
+                <?php echo anchor('dashboard/tambah_ke_keranjang/' .$mn->
+                Id_menu,'<div class="btn btn-sm btn-primary">Tambah ke Keranjang</div>') ?>
                 <a href="#" class="btn btn-sm btn-success">Detail</a>
               </div>
             </div>

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+  <div class="container-fluid">
 	<h3><i class="fas fa-edit"></i>EDIT DATA MENU</h3>
 
 	<?php foreach($menu as $mn) : ?>
@@ -19,9 +19,10 @@
 			   <input type="text" name="harga" class="form-control" value="<?php echo $mn->Harga ?>">
 			</div>
 
-			<button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+			<button type="submit" class="btn btn-primary btn-sm mt-3">Simpan</button>
 			
 		</form>
+	<?php endforeach; ?>
 
 
 </div>
